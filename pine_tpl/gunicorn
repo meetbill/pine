@@ -1,0 +1,14 @@
+#!/usr/bin/python
+
+# -*- coding: utf-8 -*-
+import re
+import sys
+import os
+root_path = os.path.dirname(__file__)
+sys.path.insert(0, os.path.join(root_path, 'p_lib'))
+
+from gunicorn.app.wsgiapp import run
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(run())
