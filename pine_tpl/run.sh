@@ -1,16 +1,16 @@
 #!/bin/bash
 ########################################################################
-f_yellow='\e[00;33m'
-f_red='\e[00;31m'
-f_green='\e[00;32m'
-f_reset='\e[00;0m'
+f_yellow='\033[00;33m'
+f_red='\033[00;31m'
+f_green='\033[00;32m'
+f_reset='\033[00;0m'
 
 function p_warn {
     echo -e "${f_yellow}[WRN]${f_reset} ${1}"
 }
 
 function p_err {
-    echo -e "${f_red}[ERR]${f_reset} ${1}"   
+    echo -e "${f_red}[ERR]${f_reset} ${1}"
 }
 
 function p_ok {
